@@ -34,13 +34,13 @@ namespace QuasarAutomation.MobileQuasarTestSuite
         {
             try
             {
-                // Navigate to Quasar Homepage
+                
                 var homePage = new HomePage(MyMobileUtils.Driver);
                 homePage.NavigateToDocs();
             }
             catch (Exception ex)
             {
-                // Log the error before failing the test
+                
                 MyMobileUtils.LogError(ex, "Error occurred while running the test");
                 throw;
             }
@@ -50,7 +50,7 @@ namespace QuasarAutomation.MobileQuasarTestSuite
         {
             try
             {
-                // Navigate to Quasar Homepage
+                
                 var docsPage = new DocsPage(MyMobileUtils.Driver);
                 docsPage.ClickMoreButton();
                 docsPage.ClickDocsLink();
@@ -60,7 +60,7 @@ namespace QuasarAutomation.MobileQuasarTestSuite
             }
             catch (Exception ex)
             {
-                // Log the error before failing the test
+                
                 MyMobileUtils.LogError(ex, "Error occurred while running the test");
                 throw;
             }
