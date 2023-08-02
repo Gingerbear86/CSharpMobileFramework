@@ -56,7 +56,7 @@ namespace QuasarAutomation.MobileUtils
 
             return driver;
         }
-        // ... Rest of your code
+       
         public static void QuitDriver()
         {
             driver?.Quit();
