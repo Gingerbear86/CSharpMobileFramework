@@ -48,8 +48,8 @@ namespace QuasarAutomation.MobileDocsPage
 
             // Find the start and end points for the scroll.
             int startX = 330;
-            int endY = (int)(size.Height * 0.9);  // Adjust these factors as needed to control the amount of scroll.
-            int startY = (int)(size.Height * 0.4); // Adjust these factors as needed to control the amount of scroll.
+            int endY = (int)(size.Height * 0.9);
+            int startY = (int)(size.Height * 0.4);
 
             // Perform the scroll action multiple times.
             for (int i = 0; i < numberOfSteps; i++)
