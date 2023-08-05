@@ -11,7 +11,6 @@ namespace QuasarAutomation.MobileTablesPage
             Driver = driver;
         }
 
-        // Methods that perform actions on the elements
-        // ... add your methods here
+       
     }
 }
