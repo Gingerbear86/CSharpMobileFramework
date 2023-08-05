@@ -29,14 +29,15 @@ namespace QuasarAutomation.MobileQuasarTestSuite
             MyMobileUtils.QuitDriver();
         }
 
-        [Test, Order(4)]
+        [Test, Order(1)]
         public void TestHomePage()
         {
             try
             {
-                // Navigate to Quasar Homepage
+                // Click More button on Homepage and navigate to Docs page
                 var homePage = new HomePage(MyMobileUtils.Driver);
-                homePage.NavigateToDocs();
+                homePage.ClickMoreButtonHome();
+                homePage.ClickDocsLinkHome();
             }
             catch (Exception ex)
             {
@@ -45,7 +46,8 @@ namespace QuasarAutomation.MobileQuasarTestSuite
                 throw;
             }
         }
-                [Test, Order(5)]
+
+        [Test, Order(2)]
         public void TestDocsPage()
         {
             try
@@ -56,7 +58,7 @@ namespace QuasarAutomation.MobileQuasarTestSuite
                 docsPage.ClickDocsLink();
                 docsPage.ClickHamburger();
                 docsPage.ClickVueComponents();
-                docsPage.ScrollDownInSmallSteps(1);
+                docsPage.ScrollToTableAndClick(); // Use the new method to scroll and click the Table element
             }
             catch (Exception ex)
             {

@@ -6,16 +6,20 @@ namespace QuasarAutomation.MobileHomePage
     public class HomePage
     {
         private IWebDriver Driver { get; }
-        private By DocsLink => MobileBy.XPath("//span[@class='block' and text()='Docs']");
+        private By More => MobileBy.XPath("//span[@class='block' and text()='More']");
+        private By DocsLink => MobileBy.XPath("/html/body/div[4]/div/div/a[1]/div[2]");
         public HomePage(IWebDriver driver)
         {
             Driver = driver;
         }
-
-        public void NavigateToDocs()
+        public void ClickMoreButtonHome()
         {
-            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
-            var docsLink = wait.Until(ExpectedConditions.ElementToBeClickable(DocsLink));
+            var moreButton = Driver.FindElement(More);
+            moreButton.Click();
+        }
+        public void ClickDocsLinkHome()
+        {
+            var docsLink = Driver.FindElement(DocsLink);
             docsLink.Click();
         }
 
